@@ -1,0 +1,13 @@
+spring:
+  profiles:
+    include: h2
+server:
+  port: 0
+
+logging:
+  file: # no log file for dev env.
+
+# Activate some Spring boot actuator endpoint
+management:
+  security:
+    enabled: false

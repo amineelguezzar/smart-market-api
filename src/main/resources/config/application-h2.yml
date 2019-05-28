@@ -1,0 +1,31 @@
+spring:
+  # enable H2 web console and set url for web console
+  # http://localhost:8080/console
+  h2:
+    console:
+      enabled: true
+      path: /h2
+
+  datasource:
+    url: jdbc:h2:file:./target/h2/smart-market-api;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=TRUE;AUTO_SERVER=TRUE
+    driver-class-name: org.h2.Driver
+    initialize: true
+#    schema: classpath:sql/h2/schema/*.sql
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+
+database:
+  username: sa
+  password:
+  schemas:
+    default: PUBLIC
+    referential: PUBLIC
+    views: PUBLIC
+    tables: PUBLIC
+  sql:
+    locking_row_for_access:
+    replace_or_create: CREATE
+    if_exists: IF EXISTS
+

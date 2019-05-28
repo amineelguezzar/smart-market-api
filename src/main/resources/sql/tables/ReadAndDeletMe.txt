@@ -1,0 +1,4 @@
+This is the place to put all the queries related to table creation and deletion.
+(for example: a table that has been specifically created for the application's usage)
+These queries are not launched automatically during application startup and therefore the tables need to be created and/or updated manually.
+The reason behind this choice is that we don't want to lose the information within the tables each time we launch the application.

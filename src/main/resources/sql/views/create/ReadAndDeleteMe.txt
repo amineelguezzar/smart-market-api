@@ -1,0 +1,4 @@
+This is the place to put all the queries related to views creation, that are needed by the application during both testing and usage phases.
+These views will either point towards the H2 tables (during testing phase) or towards the real tables during runtime.
+
+(Important: All Tables should be accessed using views!!)

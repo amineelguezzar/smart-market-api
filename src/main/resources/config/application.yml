@@ -1,0 +1,42 @@
+spring:
+  datasource:
+    url: jdbc:teradata://${database.server}/database=${database.schemas.default},CHARSET=UTF16,TMODE=TERA,FASTEXPORT
+    username: ${database.username}
+    password: ${database.password}
+    driver-class-name: com.teradata.jdbc.TeraDriver
+    initialize: false
+    tomcat:
+      max-age: 300000
+      max-active: 50
+      max-idle: 10
+      test-while-idle: true
+
+  jpa:
+    show-sql: false
+    database-platform: org.hibernate.dialect.TeradataDialect
+    properties:
+      hibernate:
+        jdbc:
+          batch_size: 500
+    hibernate:
+      ddl-auto: none
+
+  jackson:
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+    deserialization:
+      FAIL_ON_UNKNOWN_PROPERTIES: false
+
+database:
+  schemas:
+    default: ${database.environment}B_OPE
+    referential: ${database.environment}B_OPE
+    views: ${database.environment}B_OPE
+    tables: ${database.environment}B_OPE
+  sql:
+    locking_row_for_access: LOCKING ROW FOR ACCESS
+    replace_or_create: REPLACE
+    if_exists:
+
+#logging:
+#  file: ${APP_LOG}/web-service-skeleton.log # path of the log file. Must be changed accordingly to the environment requirement
