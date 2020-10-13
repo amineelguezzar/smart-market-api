@@ -22,7 +22,7 @@
         <teradata.version>16.00.00.24</teradata.version>
         <vavr.version>0.9.2</vavr.version>
         <release.plugin.version>2.5.2</release.plugin.version>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
         <assertj-core.version>3.9.1</assertj-core.version>
         <serenity-cucumber.version>1.1.36</serenity-cucumber.version>
         <serenity-spring.version>1.6.3</serenity-spring.version>
